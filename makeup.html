@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chanel Makeup</title>
+<script
+src="https://kit.fontawesome.com/225a355f8f.js"
+crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="style.css">
+<style>
+body{font-family:arial;
+}
+table, th, td {
+   
+	height:80px;
+}
+table, th, td, img
+{
+text-align:center;
+}
+
+li{display:inline;}
+
+a{text-decoration:none;font-weight:200;color:black;padding:5px;font-weight:bold;}
+a:hover{border-bottom:2px solid black}
+
+.main-img {
+	margin: 0 auto;
+}
+.container {
+	width: 1000px;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container-last {
+	width: 1100px;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.div-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-add:hover{
+	cursor: pointer;
+}
+
+.btn-add {
+	margin: 0 auto;
+	border:none;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:50px;
+	background-color:#C0C0C0;
+}
+
+
+input {
+    outline: rgb(110, 110, 242);
+    border: 1px solid gainsboro;
+    height: 40px;
+    width: 600px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-btn {
+    margin-left: -60px;
+    margin-top: -9px;
+}
+
+.fa-magnifying-glass {
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-bottom: 50px;
+}
+
+input:hover {
+    box-shadow: 1px 2px 1px gainsboro;
+}
+
+.container-search {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.fa-cart-shopping {
+    margin-left: 40px;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+      .result-element {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        height: 50px;
+        border-bottom: 1px solid black;
+        align-items: center;
+      }
+
+      .result-element:hover {
+        background-color: antiquewhite;
+        transition: 0.15s;
+        cursor: pointer;
+      }
+
+      .name {
+        width: 80%;
+      }
+
+      .image {
+        width: 10%;
+      }
+
+      .result-container {
+        width: 622px;
+        background-color: rgb(235, 237, 237);
+      }
+
+
+.card {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 310px;
+        min-height: 100vh;
+        padding: 20px;
+        background-color: #b6e3e9;
+        box-shadow: -2px 0 4px hsl #222222;
+        transition: 0.3s;
+      }
+      
+      .card.active{
+        right: 0;
+      }
+
+      .card-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .card-box {
+        display: grid;
+        grid-template-columns: 32% 50% 18%;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .card-img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        padding: 10px;
+      }
+
+      .detail-box {
+        display: grid;
+        row-gap: 0.5rem;
+      }
+      .card-product-title {
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .card-price {
+        font-weight: 500;
+      }
+
+      .remove {
+        font-size: 15px;
+        cursor: pointer;
+        
+      }
+
+      .total {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+        border-top: 1rem;
+        border-top: 1px solid gray;
+      }
+
+      .total-title {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .total-price {
+        margin-left: 0.5rem;
+      }
+
+      .btn-buy {
+        display: flex;
+        margin: 1.5rem auto 0 auto;
+        padding: 12px 20px;
+        border: none;
+        color: gray;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .btn-buy:hover {
+        background-color: #fadee1;
+        transition: 0.15s;
+      }
+
+      .close-card {
+        position: absolute;
+        top: 1rem;
+        right: 0.8rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .parent-container {
+        margin-right: 400px;
+      }
+</style>
+</head>
+<body>
+
+<div align="center"><img src="chanellogo.jpg" width="250" height="100"></div>
+<div class="container-search">
+	<input class="input" type="text" placeholder="Enter Product Name.." />
+
+	<i class="fa-solid fa-magnifying-glass input-btn"></i>
+
+	<i class="fa-solid fa-cart-shopping"></i>
+
+	<div class="result-container"></div>
+  </div>
+  <div class="card">
+	<h2 class="card-title">Your Card</h2>
+	<div class="card-content">
+	 
+	  </div>
+	  <div class="total">
+		<div class="total-title">Total</div>
+		<div class="total-price">$0</div>
+	  </div>
+	  <button type="button" class="btn-buy">Buy Now</button>
+	  <i class="fa-solid fa-remove close-card"></i>
+	</div>
+  </div>
+<tr width="100%" class="clr">
+
+ <div>
+<ul style="width:75%;margin-left:10%;text-align:center;height:50px;padding-top:25px;">
+<li style="margin-right:20px;"><a href="index.html">Home</a></li>
+<li style="margin-right:20px;"><a href="about.html">About Chanel</a></li>
+<li style="margin-right:20px;"><a href="fragrance.html">FRAGRANCE</a></li>
+<li style="margin-right:20px;"><a href="makeup.html">MAKEUP</a></li>
+<li style="margin-right:20px;"><a href="jewelry.html">JEWELRY</a></li>
+<li style="margin-right:20px;"><a href="bag.html">BAG</a></li>
+<li style="margin-right:20px;"><a href="promotion.html">Promotion Timing</a></li>
+<li style="margin-right:20px;"><a href="contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+<tr>
+<td colspan="6"><h2 style="padding:0 50px; text-align:center;font-weight:bold;font-size:40px;">Chanel Makeup</h2>
+<p style="text-align:center; line-height: 30px;">
+CHANEL face makeup formulas provide a natural and radiant look.<br>
+Primers prep for foundation, while concealers hide imperfections and liquid, cream and powder foundations ensure a flawless-looking complexion.<br>
+Blushes add a touch of colour to cheeks. Illuminating powders instantly boost glow.</p>
+</td>
+</tr>
+<img class="main-img" src="makeuplogo.jpg" width="1000px" height="450">
+<div class="parent">
+<tr>
+<div class="container">
+<div class="div-container"><img class="i-product" src="makeup1.jpg" style="width:220px; height:250px;"><h3 class="p-title" style="text-align:center;">ÉCLAT LUNAIRE</h3><p style="text-align:center">Oversize Illuminating Face Powder</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="makeup2.jpg" style="width:220px; height:250px;"><h3 class="p-title" style="text-align:center;">LES BEIGES</h3><p style="text-align:center">Healthy Glow Luminous Colour</p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="makeup3.jpg" style="width:220px; height:250px;"><h3 class="p-title" style="text-align:center;">JOUES CONTRASTE</h3><p style="text-align:center">Powder Blush</p><p class="p-price" style="text-align:center;">$110</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class="container">
+<div class="div-container"><img class="i-product" src="makeup4.jpg" style="width:320px; height:350px;"><h3 class="p-title" style="text-align:center;">BAUME ESSENTIE</h3><p style="text-align:center">Powder Blush</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="makeup5.jpg" style="width:320px; height:350px;"><h3 class="p-title" style="text-align:center;">BAUME ESSENTIE</h3><p style="text-align:center">Oversize Illuminating Face Powder</p><p class="p-price" style="text-align:center;">$150</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="makeup6.jpg" style="width:320px; height:350px;"><h3 class="p-title" style="text-align:center;">BAUME ESSENTIE</h3><p style="text-align:center">Powder Blush</p><p class="p-price" style="text-align:center;">$110</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class="container">
+<div class="div-container"><img class="i-product" src="giftset1.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">ÉCLAT LUNAIRE</h3><p style="text-align:center">Multi-Use Glow Stick</p><p class="p-price" style="text-align:center;">$130</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="giftset2.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">ÉCLAT LUNAIRE</h3><p style="text-align:center">Multi-Use Glow Stick</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="giftset3.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">ÉCLAT LUNAIRE</h3><p style="text-align:center">Multi-Use Glow Stick</p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class="container">
+<div class="div-container"><img class="i-product" src="lip1.jpg" style="width:280px; height:310px;"><h3 class="p-title" style="text-align:center;">BAUME ESSENTIEL</h3><p style="text-align:center">Multi-Use Glow Stick</p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="lip2.jpg" style="width:280px; height:310px;"><h3 class="p-title" style="text-align:center;">BAUME ESSENTIEL</h3><p style="text-align:center">Multi-Use Glow Stick</p><p class="p-price" style="text-align:center;">$140</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="lip3.jpg" style="width:280px; height:310px;"><h3 class="p-title" style="text-align:center;">ROUGE COCO BAUME</h3><p style="text-align:center">Lip Balm Buildable Colour</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class="container-last">
+<div  class="div-container"><img class="i-product" src="nail1.jpg" style="width:380px; height:430px;"><h3 class="p-title" style="text-align:center;">LE VERNIS</h3><p style="text-align:center">Longwear Nail Colour</p><p class="p-price" style="text-align:center;">$30</p><button class="btn-add">ADD TO BAG!</button></div>
+<div  class="div-container"><img class="i-product" src="nail2.jpg" style="width:380px; height:430px;"><h3 class="p-title" style="text-align:center;">LE VERNIS</h3><p style="text-align:center">Longwear Nail Colour</p><p class="p-price" style="text-align:center;">$30</p><button class="btn-add">ADD TO BAG!</button></div>
+<div  class="div-container"><img class="i-product" src="nail3.jpg" style="width:380px; height:430px;"><h3 class="p-title" style="text-align:center;">LE VERNIS</h3><p style="text-align:center">Longwear Nail Colour</p><p class="p-price" style="text-align:center;">$30</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+</div><br><br><br><br>
+<script src="script.js"></script>
+</body>
+</html>

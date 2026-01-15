@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chanel Fragrance</title>
+<link rel="stylesheet" href="style.css">
+<script
+src="https://kit.fontawesome.com/225a355f8f.js"
+crossorigin="anonymous"
+></script>
+<style>
+body{font-family:arial;
+}
+table, th, td {
+   
+	height:80px;
+}
+table, th, td, img
+{
+text-align:center;
+}
+
+li{display:inline;}
+
+a{text-decoration:none;font-weight:200;color:black;padding:5px;font-weight:bold;}
+
+.btn-add {
+	margin: 0 auto;
+	border:none;
+	padding:5px;
+  cursor: pointer;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:50px;
+	background-color:#C0C0C0;
+}
+
+input {
+    outline: rgb(110, 110, 242);
+    border: 1px solid gainsboro;
+    height: 40px;
+    width: 600px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-btn {
+    margin-left: -60px;
+    margin-top: -9px;
+}
+
+.fa-magnifying-glass {
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-bottom: 50px;
+}
+
+input:hover {
+    box-shadow: 1px 2px 1px gainsboro;
+}
+
+.container-search {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.fa-cart-shopping {
+    margin-left: 40px;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+      .result-element {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        height: 50px;
+        border-bottom: 1px solid black;
+        align-items: center;
+      }
+
+      .result-element:hover {
+        background-color: antiquewhite;
+        transition: 0.15s;
+        cursor: pointer;
+      }
+
+      .name {
+        width: 80%;
+      }
+
+      .image {
+        width: 10%;
+      }
+
+      .result-container {
+        width: 622px;
+        background-color: rgb(235, 237, 237);
+      }
+
+
+.card {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 310px;
+        min-height: 100vh;
+        padding: 20px;
+        background-color: #b6e3e9;
+        box-shadow: -2px 0 4px hsl #222222;
+        transition: 0.3s;
+      }
+      
+      .card.active{
+        right: 0;
+      }
+
+      .card-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .card-box {
+        display: grid;
+        grid-template-columns: 32% 50% 18%;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .card-img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        padding: 10px;
+      }
+
+      .detail-box {
+        display: grid;
+        row-gap: 0.5rem;
+      }
+      .card-product-title {
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .card-price {
+        font-weight: 500;
+      }
+
+      .remove {
+        font-size: 15px;
+        cursor: pointer;
+        
+      }
+
+      .total {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+        border-top: 1rem;
+        border-top: 1px solid gray;
+      }
+
+      .total-title {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .total-price {
+        margin-left: 0.5rem;
+      }
+
+      .btn-buy {
+        display: flex;
+        margin: 1.5rem auto 0 auto;
+        padding: 12px 20px;
+        border: none;
+        color: gray;
+        font-size: 1rem;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .btn-buy:hover {
+        background-color: #fadee1;
+        transition: 0.15s;
+      }
+
+      .close-card {
+        position: absolute;
+        top: 1rem;
+        right: 0.8rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .parent-container {
+        margin-right: 300px;
+      }
+</style>
+</head>
+<body>
+
+<div align="center"><img src="chanellogo.jpg" width="250" height="100"></div>
+<tr width="100%" class="clr">
+	<div class="container-search">
+		<input class="input" type="text" placeholder="Enter Product Name.." />
+	
+		<i class="fa-solid fa-magnifying-glass input-btn"></i>
+	
+		<i class="fa-solid fa-cart-shopping"></i>
+	
+		<div class="result-container"></div>
+	  </div>
+	  <div class="card">
+		<h2 class="card-title">Your Card</h2>
+		<div class="card-content">
+			
+		  </div>
+		  <div class="total">
+			<div class="total-title">Total</div>
+			<div class="total-price">$0</div>
+		  </div>
+		  <button type="button" class="btn-buy">Buy Now</button>
+		  <i class="fa-solid fa-remove close-card"></i>
+		</div>
+	  </div>
+ <div>
+<ul style="width:75%;margin-left:10%;text-align:center;height:50px;padding-top:25px;">
+<li style="margin-right:20px;"><a href="index.html">HOME</a></li>
+<li style="margin-right:20px;"><a href="about.html">ABOUT CHANEL</a></li>
+<li style="margin-right:20px;"><a href="fragrance.html">FRAGRANCE</a></li>
+<li style="margin-right:20px;"><a href="makeup.html">MAKEUP</a></li>
+<li style="margin-right:20px;"><a href="jewelry.html">JEWELRY</a></li>
+<li style="margin-right:20px;"><a href="bag.html">BAG</a></li>
+<li style="margin-right:20px;"><a href="promotion.html">PROMOTION TIMIMG</a></li>
+<li style="margin-right:20px;"><a href="contact.html">CONTACT</a></li>
+</ul>
+
+</div>
+
+<tr>
+<td colspan="6"><h2 style="padding:0 50px; text-align:center;font-weight:bold;font-size:40px;">FRAGRANCE <br>WOMEN<br></h2>
+<p style="text-align:center;">Lifelong companions for bold, luminous personalities in perpetual movement, <br>each CHANEL fragrance for women is inspired by the world of Mademoiselle and composes its own imaginative and feminine olfactory experience.</br> <br>For a complete beauty ritual, prolong the fragrance trail with other expressions of the scent</br>
+</p>
+</td>
+</tr>
+<div class="parent">
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum1.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Chance</h3><p style="text-align:center">Eau de Parfum Spray</p><p class="p-price" style="text-align:center;">$122</p><button type="button" class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum2.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Chance eau tendre</h3><p style="text-align:center">Eau de Parfum Spray </p><p class="p-price" style="text-align:center;">$110</p><button type="button" class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum3.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Chance eau fraîche</h3><p style="text-align:center">Eau de Toilette Spray </p><p class="p-price" style="text-align:center;">$100</p><button type="button" class="btn-add"><a href="contact.html">ADD TO BAG!</a></button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum4.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">COCO mademoiselle</h3><p style="text-align:center">Eau de Parfum Intense Spray </p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum5.jpg" style="width:300px; height:370px;"><h3 class="p-title" style="text-align:center;">n°5</h3><p style="text-align:center">Eau de Parfum Spray </p><p class="p-price" style="text-align:center;">$150</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum6.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">SYCOMORE</h3><p style="text-align:center">LES EXCLUSIFS DE CHANEL – Parfum</p><p class="p-price" style="text-align:center;">$280</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum7.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Chance eau fraîche</h3><p style="text-align:center">Eau de Toilette Spray </p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum8.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Gabrielle chanel essence</h3><p style="text-align:center">Eau de Parfum Spray </p><p class="p-price" style="text-align:center;">$115</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum9.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Paris - édimbourg</h3><p style="text-align:center">LES EAUX DE CHANEL – Eau de Toilette Spray starting from</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum10.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Paris - riviera</h3><p style="text-align:center">Les Eaux de CHANEL - Eau de  Spray </p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum11.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">COCO mademoiselle</h3><p style="text-align:center">Eau de Parfum Intense Mini Twist and Spray </p><p class="p-price" style="text-align:center;">$150</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum12.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Chance</h3><p style="text-align:center">Eau de Toilette Twist and Spray </p><p class="p-price" style="text-align:center;">$110</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="gift1.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Bleu de chanel</h3><p style="text-align:center">3.4 fl. oz. Parfum Twist and Spray Set</p><p class="p-price" style="text-align:center;">$222</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="gift2.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Chance eau tendre</h3><p style="text-align:center">3.4 fl. oz. & 1.2 fl. oz. Eau de Parfum Set</p><p class="p-price" style="text-align:center;">$245</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="gift3.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">n°5</h3><p style="text-align:center">3.4 fl. oz. Eau de Parfum Twist and Spray Set</p><p class="p-price" style="text-align:center;">$295</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+<br>
+</br>
+<tr>
+<td colspan="6"><h2 style="padding:0 50px; text-align:center;font-weight:bold;font-size:40px;">FRAGRANCE <br>MEN</br></h2>
+<p style="text-align:center;">Gabrielle Chanel’s life was marked by decisive encounters,<br> which inspire the masculine olfactory experiences of CHANEL fragrances for men</br>. The scents of these distinct compositions extend into expressions for bath, body and shaving.</p>
+</td>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum13.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Allure homme sport eau extrême</h3><p style="text-align:center">Eau de Parfum Spray starting from</p><p class="p-price" style="text-align:center;">$150</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum14.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Allure homme édition blanche</h3><p style="text-align:center">Eau de Parfum Spray starting from</p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum15.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Allure homme sport</h3><p style="text-align:center">Eau de Toilette Spray starting from</p><p class="p-price" style="text-align:center;">$125</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum16.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Allure homme sport</h3><p style="text-align:center">Cologne starting from</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum17.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Allure homme</h3><p style="text-align:center">After Shave </p><p class="p-price" style="text-align:center;">$110</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum18.jpg" style="width:300px; height:350px;"><h3 class="p-title" style="text-align:center;">Bleu de chanels</h3><p style="text-align:center">After Shave Balm</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container">
+<div class="div-container"><img class="i-product" src="purfum19.jpg" style="width:300px; height:300px;"><h3 class="p-title" style="text-align:center;">Allure homme sport</h3><p style="text-align:center">Eau de Toilette Twist and Spray</p><p class="p-price" style="text-align:center;">$150</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum20.jpg" style="width:300px; height:300px;"><h3 class="p-title" style="text-align:center;">Allure homme sport eau extrême</h3><p style="text-align:center">Eau de Parfum Twist and Spray</p><p class="p-price" style="text-align:center;">$126</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum21.jpg" style="width:300px; height:300px;"><h3 class="p-title" style="text-align:center;">Allure homme sport</h3><p style="text-align:center">Cologne Twist and Spray</p><p class="p-price" style="text-align:center;">$120</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+
+<tr>
+<div class = "container-late">
+<div class="div-container"><img class="i-product" src="purfum22.jpg" style="width:200px; height:200px;"><h3 class="p-title" style="text-align:center;">Allure homme</h3><p style="text-align:center">All-Over Spray</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum23.jpg" style="width:200px; height:200px;"><h3 class="p-title" style="text-align:center;">Allure homme sport</h3><p style="text-align:center">All-Over Spray</p><p class="p-price" style="text-align:center;">$100</p><button class="btn-add">ADD TO BAG!</button></div>
+<div class="div-container"><img class="i-product" src="purfum24.jpg" style="width:200px; height:200px;"><h3 class="p-title" style="text-align:center;">Bleu de chanel</h3><p style="text-align:center">All-Over Spray</p><p class="p-price" style="text-align:center;">$110</p><button class="btn-add">ADD TO BAG!</button></div>
+</div>
+</tr>
+</div>
+<br><br><br><br><br>
+<script src="script.js"></script>
+</body>
+</html>
